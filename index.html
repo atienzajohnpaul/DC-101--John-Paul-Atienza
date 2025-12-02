@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Library System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Library System</h1>
+    <p>Manage books, members, and loans</p>
+  </header>
+
+  <main>
+    <section id="books">
+      <h2>Books</h2>
+      <form id="book-form">
+        <input type="hidden" id="book-id" />
+        <input id="title" placeholder="Title" required />
+        <input id="author" placeholder="Author" required />
+        <input id="isbn" placeholder="ISBN" />
+        <input id="copies" type="number" min="1" value="1" />
+        <button type="submit">Add / Update Book</button>
+      </form>
+      <ul id="book-list"></ul>
+    </section>
+
+    <section id="members">
+      <h2>Members</h2>
+      <form id="member-form">
+        <input type="hidden" id="member-id" />
+        <input id="m-name" placeholder="Name" required />
+        <input id="m-email" placeholder="Email" />
+        <input id="m-phone" placeholder="Phone" />
+        <button type="submit">Add / Update Member</button>
+      </form>
+      <ul id="member-list"></ul>
+    </section>
+
+    <section id="loans">
+      <h2>Loans</h2>
+      <form id="loan-form">
+        <select id="loan-book"></select>
+        <select id="loan-member"></select>
+        <button type="submit">Lend Book</button>
+      </form>
+      <ul id="loan-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
