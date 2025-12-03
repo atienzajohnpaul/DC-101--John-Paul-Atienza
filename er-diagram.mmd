@@ -1,0 +1,27 @@
+erDiagram
+    BOOKS ||--o{ LOANS : "book_id"
+    MEMBERS ||--o{ LOANS : "member_id"
+
+    BOOKS {
+        int id PK
+        varchar title
+        varchar author
+        varchar isbn
+        int copies
+    }
+
+    MEMBERS {
+        int id PK
+        varchar name
+        varchar email
+        varchar phone
+    }
+
+    LOANS {
+        int id PK
+        int book_id FK
+        int member_id FK
+        date loan_date
+        date return_date
+    }
+
